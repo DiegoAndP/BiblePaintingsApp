@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">BiblicalPaintings</string>
+    <string name="app_top_name">Biblical Paintings</string>
+
+    <string name="app_painting_number">Painting %s</string>
+
+    <string name="author_michelangelo">Michelangelo</string>
+    <string name="author_leonardo_da_vinci">Leonardo Da Vinci</string>
+    <string name="author_raphael">Raphael</string>
+    <string name="author_caravaggio">Caravaggio</string>
+    <string name="author_diego_velazques">Diego Velázquez</string>
+    <string name="author_rembrandt">Rembrandt</string>
+    <string name="author_bartolomé_esteban">Bartolomé Esteban Murillo</string>
+
+    <string name="painting_virgin_rocks">Virgin of the Rocks</string>
+    <string name="painting_last_supper">The Last Supper</string>
+    <string name="painting_creation_of_adam">The Creation of Adam</string>
+    <string name="painting_disputation_holy_sacrament">Disputation of the Holy Sacrament</string>
+    <string name="painting_sistine_madonna">Sistine Madonna</string>
+    <string name="painting_last_judgement">The Last Judgement</string>
+    <string name="painting_conversion_saint_paul">The Conversion of Saint Paul</string>
+    <string name="painting_coronation_virgin">Coronation of the Virgin</string>
+    <string name="painting_return_prodigal_son">Return of the Prodigal Son</string>
+    <string name="painting_immaculate_conception_los_venerables">The Immaculate Conception of Los Venerables</string>
+
+    <string name="virgin_rocks_info">This famous Christian painting, Virgin of the Rocks, is also referred to as Madonna of the Rocks and was created between 1483 and 1486 by the Italian polymath Leonardo da Vinci. Virgin of the Rocks is one of two paintings with the same theme and composition that portrays the Virgin Mary with her child Jesus Christ alongside the infant John the Baptist and Uriel, one of the major archangels.</string>
+    <string name="last_supper_info">The most iconic religious painting, The Last Supper, was created by Leonardo da Vinci between 1495 and 1498. The painting portrays the biblical scene of Jesus Christ’s last supper before his arrest and crucifixion. The Last Supper was viewed as incredibly important since it marked the evening when Christ announced that one of his disciples would betray him, followed by the establishment of the Holy Communion.</string>
+    <string name="creation_of_adam_info">Painted between 1508 and 1512, this highly recognizable image of The Creation of Adam is also one of the most reproduced biblical paintings in art history. Michelangelo Buonarroti was one of the best Italian painters of the High Renaissance, associated with many iconic artworks inspired by religious subject matter. The Creation of Adam portrays the biblical narrative found in Genesis, which describes the creation of the first man, Adam. God is depicted as a white-bearded man covered in a swirling cloak, which contrasts Adam, who is portrayed completely nude.</string>
+    <string name="disputation_holy_sacrament_info">Raphael Sanzio da Urbino was a leading Italian painter of the 16th century whose work received much adoration for its portrayal of the neo-Platonic belief in human grandeur. Raphael achieved this essence of human grandeur through the depiction of religious scenery, as seen in Disputation of the Holy Sacrament.</string>
+    <string name="sistine_madonna_info">The Sistine Madonna is one of the most famous Christian paintings and religious portraits of the 16th century, created by Raphael, who was responsible for many of the best paintings of the Italian High Renaissance. The painting was commissioned in 1512 by Pope Julius II in light of the announcement that the Italian town of Piacenza had joined the papal states.</string>
+    <string name="last_judgement_info">Michelangelo Buonarroti was one of the most influential Renaissance artists in art history whose legacy continues to inspire many to follow in his footsteps. Aside from being one of the greatest sculptors, Michelangelo was also incredibly skilled at creating biblical paintings and was commissioned by Pope Clement VII to paint one of the world’s most famous religious paintings, The Last Judgement, in the Sistine Chapel.</string>
+    <string name="conversion_saint_paul_info">This famous Catholic painting was painted in 1600 by the Italian painter Michelangelo Merisi da Caravaggio. The Conversion of Saint Paul refers to the turning point in the apostle Paul’s life when he stopped executing early Christians and converted into a follower of Jesus Christ instead.</string>
+    <string name="coronation_virgin_info">The Coronation of the Virgin is one of the rare religious paintings attributed to the portraiture master Diego Velázquez. The painting illustrates the Virgin Mary with a modest expression and lowered eyes in the middle of being crowned by God and Jesus Christ. The base of the painting shows multiple cherubs while the figures above form a perfect triangular representation of the Holy Trinity.</string>
+    <string name="return_prodigal_son_info">The Return of the Prodigal Son is one of the most famous parables in Christian theology. The parable follows the story of a son who asks his father for his share of the inheritance. After leaving his father’s house, the son squanders his wealth and eventually returns after facing poverty and sickness. In the end, the father forgives his son and the parable becomes a lesson on forgiveness and a reflection of the biblical lesson that God forgives everyone who repents.
+
+Return of the Prodigal Son was created by none other than the famous Dutch master of painting, Rembrandt van Rijn who approached the parable as “we should be glad: for this son was dead and is alive again; was lost, and is found.” Rembrandt captures the scene of the son returning home and facing his father while stationed on his knees in an act of seeking forgiveness.</string>
+    <string name="immaculate_conception_los_venerables_info">The Virgin Mary is perhaps the most frequently represented biblical character in many Catholic paintings and religious portraits. The Immaculate Conception of Los Venerables shows the Virgin Mary adorned in a white robe with the illumination of the sun behind her head and the moon at her feet. Mary is surrounded by numerous rosy-cheeked cherubs as she crosses her hands over her chest with a blue mantle.</string>
+</resources>

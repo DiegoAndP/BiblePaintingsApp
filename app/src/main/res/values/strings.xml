@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">BiblicalPaintings</string>
     <string name="app_top_name">Biblical Paintings</string>
+    <string name="app_close_dialog">Close</string>
 
     <string name="app_painting_number">Painting %s</string>
 

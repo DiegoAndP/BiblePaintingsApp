@@ -6,9 +6,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.StringRes
 import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.EaseIn
+import androidx.compose.animation.core.EaseInOutElastic
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -45,6 +49,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import com.example.biblicalpaintings.datasource.PaintingList
 import com.example.biblicalpaintings.model.Painting
 
@@ -80,7 +86,11 @@ fun BiblePicturesApp() {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             items(paintingList) {
-                PaintingCard(painting = it, modifier = Modifier.fillMaxSize().padding(horizontal = 16.dp))
+                PaintingCard(
+                    painting = it, modifier = Modifier
+                        .fillMaxSize()
+                        .padding(horizontal = 16.dp)
+                )
             }
         }
     }
@@ -110,15 +120,33 @@ fun PaintingCard(
     var expanded by remember {
         mutableStateOf(false)
     }
+    var imageIsPressed by remember {
+        mutableStateOf(false)
+    }
 
-    Card(modifier = modifier, elevation = CardDefaults.cardElevation(4.dp)) {
+    if (imageIsPressed) {
+
+        PaintingImageDialog(
+            painting = painting,
+            imageIsPressed = imageIsPressed,
+            onDismiss = { imageIsPressed = !imageIsPressed },
+            modifier = Modifier.fillMaxSize(1f)
+        )
+    }
+
+    Card(
+        modifier = modifier,
+        elevation = CardDefaults.cardElevation(4.dp)
+    ) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .animateContentSize(animationSpec = spring(
-                    stiffness = Spring.StiffnessLow,
-                    dampingRatio = Spring.DampingRatioMediumBouncy
-                )),
+                .animateContentSize(
+                    animationSpec = spring(
+                        stiffness = Spring.StiffnessLow,
+                        dampingRatio = Spring.DampingRatioMediumBouncy
+                    )
+                ),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
@@ -155,7 +183,10 @@ fun PaintingCard(
                         ambientColor = MaterialTheme.colorScheme.onPrimary,
                         shape = MaterialTheme.shapes.large
                     )
+                    .clickable(onClick = { imageIsPressed = !imageIsPressed }
+                    )
             )
+
             PaintingIconButton(
                 modifier = Modifier.align(Alignment.CenterHorizontally),
                 expanded = expanded,
@@ -195,10 +226,32 @@ private fun TextInfo(@StringRes textInfo: Int, modifier: Modifier = Modifier) {
     )
 }
 
+@Composable
+fun PaintingImageDialog(
+    painting: Painting,
+    imageIsPressed: Boolean,
+    onDismiss: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Dialog(
+        onDismissRequest = onDismiss,
+        properties = DialogProperties(dismissOnClickOutside = true)
+    ) {
+        Image(
+            modifier = modifier,
+            painter = painterResource(id = painting.paintingImage),
+            contentDescription = stringResource(
+                id = painting.paintingName
+            )
+        )
+
+    }
+}
+
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun AppPreview() {
-    AppTheme {
+    AppTheme(useDarkTheme = false) {
         Surface(modifier = Modifier.fillMaxSize()) {
             BiblePicturesApp()
         }

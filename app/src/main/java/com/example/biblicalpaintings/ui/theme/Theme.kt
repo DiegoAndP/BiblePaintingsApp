@@ -1,13 +1,13 @@
 
+import android.app.Activity
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MaterialTheme.shapes
 import androidx.compose.material3.MaterialTheme.typography
-import androidx.compose.material3.Shapes
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import com.example.biblicalpaintings.ui.theme.Typography
+import androidx.compose.ui.platform.LocalView
 import com.example.biblicalpaintings.ui.theme.md_theme_dark_background
 import com.example.biblicalpaintings.ui.theme.md_theme_dark_error
 import com.example.biblicalpaintings.ui.theme.md_theme_dark_errorContainer
@@ -66,7 +66,6 @@ import com.example.biblicalpaintings.ui.theme.md_theme_light_surfaceTint
 import com.example.biblicalpaintings.ui.theme.md_theme_light_surfaceVariant
 import com.example.biblicalpaintings.ui.theme.md_theme_light_tertiary
 import com.example.biblicalpaintings.ui.theme.md_theme_light_tertiaryContainer
-import java.lang.reflect.Type
 
 
 private val LightColors = lightColorScheme(

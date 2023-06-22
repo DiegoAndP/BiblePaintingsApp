@@ -6,11 +6,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.StringRes
 import androidx.compose.animation.animateContentSize
-import androidx.compose.animation.core.EaseIn
-import androidx.compose.animation.core.EaseInOutElastic
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -128,7 +125,6 @@ fun PaintingCard(
 
         PaintingImageDialog(
             painting = painting,
-            imageIsPressed = imageIsPressed,
             onDismiss = { imageIsPressed = !imageIsPressed },
             modifier = Modifier.fillMaxSize(1f)
         )
@@ -229,7 +225,6 @@ private fun TextInfo(@StringRes textInfo: Int, modifier: Modifier = Modifier) {
 @Composable
 fun PaintingImageDialog(
     painting: Painting,
-    imageIsPressed: Boolean,
     onDismiss: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -244,7 +239,6 @@ fun PaintingImageDialog(
                 id = painting.paintingName
             )
         )
-
     }
 }
 
